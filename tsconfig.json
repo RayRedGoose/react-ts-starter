@@ -14,7 +14,20 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react",
-    "baseUrl": "./src/"
+    "baseUrl": ".",
+    "paths": {
+      "api/*": ["src/_ts-assets/apiCalls/*"],
+      "components/*": ["src/Components/*"],
+      "containers/*": ["src/Containers/*"],
+      "dux/*": ["src/dux/*"],
+      "images/*": ["src/assets/images/*"],
+      "reduxStore/*": ["src/reduxStore/*"],
+      "styles/*": ["src/assets/styles/*"],
+      "test/*": ["test/*"],
+      "types/*": ["src/_ts-assets/types/*"],
+      "utils/*": ["src/_ts-assets/utils/*"]
+    },
+    "rootDirs": ["src"]
   },
   "exclude": ["node_modules"],
   "include": ["**/*.ts", "**/*.tsx"]
