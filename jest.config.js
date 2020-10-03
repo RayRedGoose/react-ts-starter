@@ -10,10 +10,14 @@ module.exports = {
     }),
   },
   preset: 'ts-jest',
-  roots: ['<rootDir>/src', '<rootDir>/test'],
+  roots: ['<rootDir>/src'],
   snapshotSerializers: ['enzyme-to-json/serializer'],
-  setupFilesAfterEnv: ['<rootDir>/test/_config/setupEnzyme.ts'],
+  setupFilesAfterEnv: ['<rootDir>/src/__tests__/_config/setupEnzyme.ts'],
   testRegex: '(/__tests__/.*|(\\.|/)(test|spec)\\.(jsx?|tsx?)$)',
+  testPathIgnorePatterns: [
+    '<rootDir>/src/__tests__/_config/*',
+    '<rootDir>/src/__tests__/components/__snapshots__/*',
+  ],
   transform: {
     '^.+\\.tsx?$': 'ts-jest',
   },

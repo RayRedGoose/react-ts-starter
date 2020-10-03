@@ -23,7 +23,7 @@
       "images/*": ["src/assets/images/*"],
       "reduxStore/*": ["src/reduxStore/*"],
       "styles/*": ["src/assets/styles/*"],
-      "test/*": ["test/*"],
+      "test/*": ["src/__tests__/*"],
       "types/*": ["src/_ts-assets/types/*"],
       "utils/*": ["src/_ts-assets/utils/*"]
     },
