@@ -1,4 +1,4 @@
-import { IStore } from '_types';
+import { IStore } from '_ts-assets/types';
 import { CurrentUserType } from './types';
 
 const getCurrentUser = ({ currentUser }: IStore): CurrentUserType =>

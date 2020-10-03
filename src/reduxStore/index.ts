@@ -1,7 +1,7 @@
 import { applyMiddleware, createStore, Store } from 'redux';
 import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
-import { IStore } from '_types';
+import { IStore } from '_ts-assets/types';
 import rootReducer from './rootReducer';
 
 const store: Store<IStore> = createStore(

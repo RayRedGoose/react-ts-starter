@@ -1,6 +1,6 @@
 import { Action, Dispatch } from 'redux';
 import { ThunkAction } from 'redux-thunk';
-import api from '_apiCalls';
+import api from '_ts-assets/apiCalls';
 import * as actionCreators from './actionCreators';
 import { ICurrentUser, IErroredCurrentUser } from './types';
 
