@@ -1,35 +1,40 @@
 module.exports = {
-  root: true,
+  extends: [
+    'airbnb-typescript',
+    'airbnb/hooks',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:jest/recommended',
+    'prettier',
+    'prettier/react',
+    'prettier/@typescript-eslint',
+    'plugin:prettier/recommended',
+  ],
+  plugins: ['react', '@typescript-eslint', 'jest'],
+  env: {
+    browser: true,
+    es6: true,
+    jest: true,
+  },
+  globals: {
+    Atomics: 'readonly',
+    SharedArrayBuffer: 'readonly',
+  },
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    ecmaVersion: 6,
-    sourceType: 'module',
     ecmaFeatures: {
       jsx: true,
     },
+    ecmaVersion: 2018,
+    sourceType: 'module',
     project: './tsconfig.json',
   },
-  plugins: ['@typescript-eslint', 'jest', 'react', 'import', 'react-hooks'],
   rules: {
-    'additional-rule': 'warn',
-    'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exhaustive-deps': 'warn',
-    semi: 'error',
-  },
-  extends: [
-    'react-app',
-    'shared-config',
-    'airbnb-typescript',
-    'plugin:jest/recommended',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:react/recommended',
-  ],
-  overrides: [
-    {
-      files: ['**/*.ts?(x)'],
-      rules: {
-        'additional-typescript-only-rule': 'warn',
+    'linebreak-style': 'off',
+    'prettier/prettier': [
+      'error',
+      {
+        endOfLine: 'auto',
       },
-    },
-  ],
+    ],
+  },
 };
