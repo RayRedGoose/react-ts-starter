@@ -1,4 +1,4 @@
-import { CurrentUserType } from 'reduxStore/dux/currentUser/types';
+import { CurrentUserType } from 'dux/currentUser/types';
 
 export interface IStore {
   currentUser: CurrentUserType;
