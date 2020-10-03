@@ -1,9 +1,29 @@
 {
-  "name": "restaurant-guide",
-  "version": "0.1.0",
+  "name": "react-starter",
+  "version": "2.0.0",
   "private": true,
   "engines": {
     "node": "13.5.0"
+  },
+  "babel": {
+    "presets": [
+      "@babel/typescript",
+      [
+        "@babel/env",
+        {
+          "loose": true
+        }
+      ],
+      "@babel/react"
+    ],
+    "plugins": [
+      [
+        "@babel/proposal-class-properties",
+        {
+          "loose": true
+        }
+      ]
+    ]
   },
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
@@ -28,33 +48,15 @@
     "react-scripts": "^3.4.3",
     "redux": "^4.0.5",
     "redux-devtools-extension": "^2.13.8",
+    "redux-thunk": "^2.3.0",
     "ts-jest": "^25.2.0",
     "typescript": "^3.7.5"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=node",
+    "test": "jest",
     "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "shared-config"
-    ],
-    "rules": {
-      "additional-rule": "warn"
-    },
-    "overrides": [
-      {
-        "files": [
-          "**/*.ts?(x)"
-        ],
-        "rules": {
-          "additional-typescript-only-rule": "warn"
-        }
-      }
-    ]
   },
   "browserslist": {
     "production": [
@@ -86,6 +88,9 @@
   "jest": {
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/test/_config/setupTests.js"
     ]
   }
 }

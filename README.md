@@ -3,6 +3,9 @@
 - TypeScript
 - React + Routers
 - Redux
+- Redux Thunk
 - Jest with Enzyme
 - ESLint
+- Prettier
 - Sass
+- TravisCI
