@@ -5,7 +5,7 @@ import { CookiesProvider } from 'react-cookie';
 import App from './App';
 import store from 'reduxStore';
 
-const app = (
+const app: JSX.Element = (
   <Provider store={store}>
     <CookiesProvider>
       <BrowserRouter>

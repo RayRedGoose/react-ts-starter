@@ -1,5 +1,3 @@
-export type CurrentUserType = ICurrentUser & IErroredCurrentUser;
-
 export interface ICurrentUser {
   firstName: string;
   lastName: string;
@@ -8,6 +6,8 @@ export interface ICurrentUser {
 export interface IErroredCurrentUser {
   error: string;
 }
+
+export type CurrentUserType = ICurrentUser & IErroredCurrentUser;
 
 export interface IActionType {
   type: string;
