@@ -1,23 +1,7 @@
 import './assets/styles/index.scss';
-
-import React from 'react';
 import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
-import { BrowserRouter } from 'react-router-dom';
-import { Provider } from 'react-redux';
-import { CookiesProvider } from 'react-cookie';
-import App from './Containers/App/App';
-import store from 'reduxStore';
-
-const app = (
-  <Provider store={store}>
-    <CookiesProvider>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </CookiesProvider>
-  </Provider>
-);
+import app from './App';
 
 ReactDOM.render(app, document.getElementById('root'));
 
