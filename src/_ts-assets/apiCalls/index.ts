@@ -1,12 +1,12 @@
-import { ICurrentUser } from 'dux/currentUser/types';
+// import { ICurrentUser } from 'dux/currentUser/types';
 
-const defaultCurrentUser: ICurrentUser = {
-  firstName: 'Ray',
-  lastName: 'Zlou',
-};
+// const defaultCurrentUser: ICurrentUser = {
+//   firstName: 'Ray',
+//   lastName: 'Zlou',
+// };
 
 const api = {
-  get: (url: string): ICurrentUser => defaultCurrentUser,
+  get: (url: string) => url,
 };
 
 export default api;
