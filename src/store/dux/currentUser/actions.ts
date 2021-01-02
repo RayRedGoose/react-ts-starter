@@ -1,6 +1,6 @@
 import { Action, Dispatch } from 'redux';
 import { ThunkAction } from 'redux-thunk';
-import api from '_ts-assets/apiCalls';
+import api from 'api';
 import * as actionCreators from './actionCreators';
 import { ICurrentUser, IErroredCurrentUser } from './types';
 
@@ -14,9 +14,9 @@ type ActionReturnType = ThunkAction<
 export const saveCurrentUser = (): ActionReturnType => {
   return async (dispatch: Dispatch) => {
     try {
-      const currentUser = await api.get('login');
+      await api.get('login');
 
-      return dispatch(actionCreators.saveCurrentUserSuccess(currentUser));
+      // return dispatch(actionCreators.saveCurrentUserSuccess(currentUser));
     } catch (error) {
       dispatch(actionCreators.saveCurrentUserError(error));
     }
