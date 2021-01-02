@@ -7,4 +7,4 @@ const mapStateToProps = (state: IStore): Props => ({
   loggedUser: userSelectors.getCurrentUser(state),
 });
 
-export default connect(mapStateToProps, null)(App);
+export default connect(mapStateToProps)(App);
