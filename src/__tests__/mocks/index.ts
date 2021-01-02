@@ -1,4 +1,4 @@
-import { ICurrentUser } from 'dux/currentUser/types';
+import { ICurrentUser } from 'store/currentUser/types';
 
 export const defaultCurrentUser: ICurrentUser = {
   firstName: 'Ray',

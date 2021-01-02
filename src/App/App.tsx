@@ -1,7 +1,9 @@
 import React from 'react';
 
-const App: React.FC = () => {
-  return <div className="app" />;
-};
+class App extends React.Component {
+  render() {
+    return <div>Use TypeScript with React</div>;
+  }
+}
 
 export default App;
